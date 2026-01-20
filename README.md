@@ -22,6 +22,11 @@ If you have a commercial request, you can contact me via e-mail remdex@gmail.com
 * Login: remdex@gmail.com
 * Pass: admin
 
+## Youtube demo
+
+* English language demo - https://youtu.be/uUdog-MFqyM
+* Lithuanian language demo - https://youtu.be/NXm7gltWOW0
+
 ### Additional information
 
 * Demo is reset every hour
