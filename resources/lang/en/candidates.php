@@ -4,6 +4,7 @@ return [
     'title'  => 'Candidates',
     'uploaded_files' => 'Uploaded files',
     'create' => 'Create new',
+    'delete' => 'Delete candidate',
     'edit' => 'Edit candidate',
     'create_new' => 'Creating a new candidate',
     'description' => 'Candidates',
