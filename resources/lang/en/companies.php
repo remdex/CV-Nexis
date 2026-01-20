@@ -18,6 +18,7 @@ return [
         'company_code' => 'Company Code',
         'company_name' => 'Company Name',
         'activity' => 'Activity',
+        'activity_start' => 'Activity start',
         'type' => 'Type',
         'country' => 'Country',
         'registration_date' => 'Registration Date',
