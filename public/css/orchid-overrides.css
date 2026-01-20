@@ -1,0 +1,55 @@
+/* Orchid overrides
+ * Place your custom Orchid CSS overrides here. This file is loaded
+ * after Orchid's default CSS so you can safely override selectors.
+ * Example: override `.workspace-limit` below.
+ */
+
+/* Example override: adjust workspace width */
+.workspace-limit {
+  max-width: 1800px;
+}
+
+.bootstrap-tagsinput, .chosen-choices, .chosen-single, .form-control, .form-range {
+    max-width: 800px;
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1900px;
+    }
+}
+
+.dropzone .dz-preview .btn-ai, 
+.dropzone-wrapper .dz-preview .btn-ai{
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, .4);
+    bottom: 10px;
+    justify-content: center;
+    left: 0;
+    padding: 0 .6rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+    cursor: pointer;
+}
+
+
+
+/* Add your overrides below this line */
+
+/* Remove blue focus/outline and any focus box-shadow on AI button while processing */
+.btn-ai:focus,
+.btn-ai:active,
+.btn-ai:focus-visible,
+.btn-ai[disabled],
+.btn-ai.disabled {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+/* Prevent Bootstrap focus ring from appearing when button contains spinner */
+.btn-ai .spinner-border {
+    vertical-align: middle;
+}
