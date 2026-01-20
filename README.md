@@ -22,6 +22,8 @@ If you have a commercial request, you can contact me via e-mail remdex@gmail.com
 * Login: remdex@gmail.com
 * Pass: admin
 
+### Additional information
+
 * Demo is reset every hour
 * You can try to download few sample CV from https://www.resumeviking.com/templates/ It's the ones I tried.
 * AI Processing document takes from 5-15 seconds. So wait till a circle stop spinning.
