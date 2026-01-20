@@ -5,15 +5,28 @@
 
 CV Nexis is an intelligent Human Resource Management (HRM) application designed to streamline the candidate evaluation process through advanced AI-powered CV analysis. The platform empowers HR professionals and recruiters to efficiently manage candidate data by automating the extraction and categorization of key information from resumes.
 
+## Contact details & History
+
+It started when I saw the software my wife’s company was using. I knew I could do better
+
+— so I did. Meet a faster, smarter way to work.
+
+If you have a commercial request, you can contact me via e-mail remdex@gmail.com, my other profiles
+
+* Telegram: https://t.me/remdex
+* Discord: https://discord.com/users/711446833066541066
+* Microsoft Teams: https://teams.microsoft.com/l/chat/0/0?users=remdex@gmail.com
+* WhatsApp: https://wa.me/37065272274
+
 ## Demo
 
-https://hrm.qu.lt/
-Login: remdex@gmail.com
-Pass: admin
+> https://hrm.qu.lt/
+> Login: remdex@gmail.com
+> Pass: admin
 
 * Demo is reset every hour
 * You can try to download few sample CV from https://www.resumeviking.com/templates/ It's the ones I tried.
-* AI PRocessing document takes from 5-15 seconds. So wait till circle stop spinning.
+* AI Processing document takes from 5-15 seconds. So wait till a circle stop spinning.
 
 Demo video under way...
 
@@ -61,7 +74,7 @@ Demo video under way...
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-org/civis-hrm.git
+git clone https://github.com/remdex/CV-Nexis.git
 cd civis-hrm
 ```
 
