@@ -12,6 +12,7 @@ return [
     'delete' => 'Delete',
     'delete_confirm' => 'After deleting, the company will be gone forever.',
     'view' => 'View',
+    'no_select' => '- Select -',
     
     'fields' => [
         'company_code' => 'Company Code',
@@ -30,9 +31,15 @@ return [
     'filters' => [
         'company_code' => 'Company Code',
         'company_name' => 'Company Name',
+        'activity' => 'Activity',
+        'type' => 'Type',
+        'type_placeholder' => 'Select company type',
+        'activity_placeholder' => 'Select activity',
         'search_by_code' => 'Search by company code',
         'search_by_name' => 'Search by company name',
         'search_by_vat_code' => 'Search by VAT code',
+        'division_municipality' => 'Division Municipality',
+        'search_by_division_municipality' => 'Search by division municipality',
     ],
     
     'form_fields' => [
@@ -51,6 +58,7 @@ return [
         'division_number' => 'Division Number',
         'division_name' => 'Division Name',
         'division_municipality' => 'Division Municipality',
+        'municipality' => 'Municipality',
         'division_code' => 'Division Code',
         'veiklos_pradzia' => 'Activity start',
         'veiklos_pabaiga' => 'Activity end',

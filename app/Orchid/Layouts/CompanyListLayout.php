@@ -36,6 +36,8 @@ class CompanyListLayout extends Table
                 }),
             TD::make('vat_code', __('companies.fields.vat_code'))
                 ->class('text-nowrap'),
+            TD::make('division_municipality', __('companies.form_fields.municipality'))
+                ->class('text-nowrap'),
             TD::make('name', __('companies.fields.company_name'))
                 ->render(function (Company $company) {
                     return Link::make($company->name)
@@ -56,7 +58,7 @@ class CompanyListLayout extends Table
                 ->render(function (Company $company) {
                     return $company->registration_date?->format('Y-m-d');
                 }),
-            TD::make('activity_start_date', __('companies.fields.veiklos_pradzia'))
+            TD::make('activity_start_date', __('companies.fields.activity_start'))
              ->class('text-nowrap')
                 ->render(function (Company $company) {
                     return $company->activity_start_date->format('Y-m-d H:i');

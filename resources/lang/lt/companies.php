@@ -12,6 +12,7 @@ return [
     'delete' => 'Ištrinti',
     'delete_confirm' => 'Ištrynus, įmonė bus visam laikui pašalinta.',
     'view' => 'Peržiūra',
+    'no_select' => '- Nepasirinkta -',
     
     'fields' => [
         'company_code' => 'Įmonės kodas',
@@ -23,6 +24,7 @@ return [
         'vat_code' => 'PVM kodas',
         'created' => 'Sukurta',
         'no_activity' => '-',
+        'activity_start' => 'Veiklos pradžia',
         'veiklos_pradzia' => 'Veiklos pradžia',
         'veiklos_pabaiga' => 'Veiklos pabaiga',
         'detailed_information' => 'Detali informacija',
@@ -32,9 +34,15 @@ return [
     'filters' => [
         'company_code' => 'Įmonės kodas',
         'company_name' => 'Įmonės pavadinimas',
+        'activity' => 'Veikla',
+        'type' => 'Tipas',
+        'type_placeholder' => 'Pasirinkite tipo',
+        'activity_placeholder' => 'Pasirinkite veiklą',
         'search_by_code' => 'Ieškoti pagal įmonės kodą',
         'search_by_name' => 'Ieškoti pagal įmonės pavadinimą',
         'search_by_vat_code' => 'Ieškoti pagal PVM kodą',
+        'division_municipality' => 'Padalinio savivaldybė',
+        'search_by_division_municipality' => 'Ieškoti pagal padalinio savivaldybę',
     ],
     
     'form_fields' => [
@@ -51,6 +59,7 @@ return [
         'vat_registered' => 'PVM įregistruota',
         'vat_deregistered' => 'PVM išregistruota',
         'division_number' => 'Padalinio numeris',
+        'municipality' => 'Apskritis',
         'division_name' => 'Padalinio pavadinimas',
         'division_municipality' => 'Padalinio savivaldybė',
         'division_code' => 'Padalinio kodas',

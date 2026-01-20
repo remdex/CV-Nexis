@@ -153,6 +153,10 @@ class ImportCompanies extends Command
         fclose($handle);
         $bar->finish();
         
+        // After all batches inserted, remove unused activity classificators via SQL
+        $this->info("\nRemoving unused activity_classificators via SQL...");
+        $this->cleanupUnusedActivityClassificators();
+        $this->info("Removal completed.");
         // Re-enable query logging
         DB::connection()->enableQueryLog();
 
@@ -239,6 +243,7 @@ class ImportCompanies extends Command
             
             // Insert activity relationships into pivot table
             if (!empty($activityMappings)) {
+                
                 $pivotRecords = [];
                 
                 // Get all company IDs in one query for efficiency
@@ -274,6 +279,22 @@ class ImportCompanies extends Command
         } catch (\Exception $e) {
             $this->error("\nBatch insert error: " . $e->getMessage());
             return 0;
+        }
+    }
+
+    /**
+     * Remove unreferenced activity_classificators using SQL for scale.
+     */
+    private function cleanupUnusedActivityClassificators(): void
+    {
+        try {
+            $deleted = DB::table('activity_classificators')
+                ->whereNotIn('id', DB::table('company_activity')->select('activity_classificator_id'))
+                ->delete();
+
+            $this->info("Deleted {$deleted} unused activity_classificators.");
+        } catch (\Exception $e) {
+            $this->error('Error deleting unused activity_classificators: ' . $e->getMessage());
         }
     }
 
