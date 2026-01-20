@@ -20,9 +20,9 @@ If you have a commercial request, you can contact me via e-mail remdex@gmail.com
 
 ## Demo
 
-> https://hrm.qu.lt/
-> Login: remdex@gmail.com
-> Pass: admin
+* https://hrm.qu.lt/
+* Login: remdex@gmail.com
+* Pass: admin
 
 * Demo is reset every hour
 * You can try to download few sample CV from https://www.resumeviking.com/templates/ It's the ones I tried.
