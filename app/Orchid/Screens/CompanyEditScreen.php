@@ -4,11 +4,13 @@ namespace App\Orchid\Screens;
 
 use App\Models\Company;
 use App\Models\ActivityClassificator;
+use App\Models\Municipality;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\DateTimer;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Screen\Fields\Relation;
+use Orchid\Screen\Fields\Select;
 use Orchid\Support\Facades\Layout;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Screen;
@@ -140,8 +142,10 @@ class CompanyEditScreen extends Screen
                 Input::make('company.division_name')
                     ->title(__('companies.form_fields.division_name')),
 
-                Input::make('company.division_municipality')
-                    ->title(__('companies.form_fields.division_municipality')),
+                Select::make('company.division_municipality')
+                    ->title('Municipality')
+                    ->options(Municipality::all()->pluck('name', 'code')->toArray())
+                    ->empty(''),
 
                 Input::make('company.division_code')
                     ->title(__('companies.form_fields.division_code')),

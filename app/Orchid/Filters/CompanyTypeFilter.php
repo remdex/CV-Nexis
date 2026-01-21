@@ -78,7 +78,7 @@ class CompanyTypeFilter extends Filter
                 ->options(config('company.types', []))
                 ->placeholder(__('companies.filters.type_placeholder'))
                 ->title('')
-                ->empty(__('companies.no_select'))
+                ->empty(__('companies.no_select_company_type'))
                 ->value($this->request->get('type_code')),
         ];
     }

@@ -36,8 +36,11 @@ class CompanyListLayout extends Table
                 }),
             TD::make('vat_code', __('companies.fields.vat_code'))
                 ->class('text-nowrap'),
-            TD::make('division_municipality', __('companies.form_fields.municipality'))
-                ->class('text-nowrap'),
+            TD::make('division_municipality', __('companies.form_fields.division_municipality'))
+                ->class('text-nowrap')
+                ->render(function (Company $company) {
+                    return optional($company->municipality)->name ?? $company->division_municipality;
+                }),
             TD::make('name', __('companies.fields.company_name'))
                 ->render(function (Company $company) {
                     return Link::make($company->name)
@@ -51,7 +54,7 @@ class CompanyListLayout extends Table
                     }
                     return $activities->pluck('name_lt')->implode(', ');
                 }),
-            TD::make('client_type', __('companies.fields.type')),
+            // TD::make('client_type', __('companies.form_fields.client_type')),
             TD::make('country', __('companies.fields.country')),
             TD::make('registration_date', __('companies.fields.registration_date'))
              ->class('text-nowrap')
@@ -73,7 +76,8 @@ class CompanyListLayout extends Table
                     $url = 'https://rekvizitai.vz.lt/imones/1/?scrollTo=searchForm&name=&company_code='
                         . urlencode($company->company_code)
                         . '&search_word=&industry=&search_terms=&location=&catUrlKey=&resetFilter=0&order=1&redirected=1';
-                    return '<a href="' . e($url) . '" target="_blank" rel="noopener noreferrer">🔗 ' . __('companies.fields.view_details') . '</a>';
+                    $text = '🔗 ' . __('companies.fields.view_details');
+                    return '<a href="' . e($url) . '" target="_blank" rel="noopener noreferrer">' . e($text) . '</a>';
                 }),
         ];
     }

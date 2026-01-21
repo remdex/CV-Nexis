@@ -49,7 +49,6 @@ class PlatformProvider extends OrchidServiceProvider
             ->icon('bs.award')
             ->route('platform.hrm.competence')
             ->permission('platform.systems.competences'),
-
             
 
             Menu::make(__('documents.title'))
@@ -64,16 +63,21 @@ class PlatformProvider extends OrchidServiceProvider
             ->permission('platform.systems.document_types')->divider(),
 
             Menu::make(__('companies.title'))
-            ->title(__('documents.companies'))
-            ->icon('bs.building')
-            ->route('platform.hrm.company.list')
-            ->permission('platform.systems.companies'),
-            
+                ->title(__('companies.title'))
+                ->icon('bs.building')
+                ->route('platform.hrm.company.list')
+                ->permission('platform.systems.companies'),
+
+            Menu::make(__('municipalities.title'))
+                ->icon('bs.geo-alt')
+                ->route('platform.hrm.municipality.list')
+                ->permission('platform.systems.municipalities'),
+
             Menu::make(__('activities.title'))
-            ->icon('bs.diagram-3')
-            ->route('platform.hrm.companyactivity')
-            ->permission('platform.systems.activities')
-            ->divider(),
+                ->icon('bs.diagram-3')
+                ->route('platform.hrm.companyactivity')
+                ->permission('platform.systems.activities')
+                ->divider(),
 
             /*Menu::make('Get Started')
                 ->icon('bs.book')
@@ -147,13 +151,18 @@ class PlatformProvider extends OrchidServiceProvider
             ItemPermission::group(__('System'))
                 ->addPermission('platform.systems.roles', __('Roles'))
                 ->addPermission('platform.systems.users', __('Users')),
+
             ItemPermission::group(__('candidates.human_resources'))
                 ->addPermission('platform.systems.candidates', __('candidates.title'))
                 ->addPermission('platform.systems.candidates.delete', __('candidates.delete'))
                 ->addPermission('platform.systems.specialities',__('specialities.title'))
-                ->addPermission('platform.systems.competences',__('competences.title'))
-                ->addPermission('platform.systems.companies','Companies')
-                ->addPermission('platform.systems.activities','Activity Classificators'),
+                ->addPermission('platform.systems.competences',__('competences.title')),
+
+            ItemPermission::group(__('companies.title'))
+                ->addPermission('platform.systems.companies',__('companies.title'))
+                ->addPermission('platform.systems.activities',__('activities.title'))
+                ->addPermission('platform.systems.municipalities',__('municipalities.title')),
+
             ItemPermission::group(__('documents.title'))
                 ->addPermission('platform.systems.document_types',__('document_types.title'))
                 ->addPermission('platform.systems.documents',__('documents.title'))

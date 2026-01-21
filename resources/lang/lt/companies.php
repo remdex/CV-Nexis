@@ -12,7 +12,8 @@ return [
     'delete' => 'Ištrinti',
     'delete_confirm' => 'Ištrynus, įmonė bus visam laikui pašalinta.',
     'view' => 'Peržiūra',
-    'no_select' => '- Nepasirinkta -',
+    'no_select_company_type' => '- Įmonės tipas -',
+    'no_select_municipality' => '- Savivaldybė -',
     
     'fields' => [
         'company_code' => 'Įmonės kodas',

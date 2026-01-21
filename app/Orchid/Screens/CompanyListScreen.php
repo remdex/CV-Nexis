@@ -18,7 +18,7 @@ class CompanyListScreen extends Screen
     public function query(): iterable
     {
         return [
-            'companies' => Company::with('activityClassificators')
+            'companies' => Company::with(['activityClassificators', 'municipality'])
                 ->filters(CompanySelection::class)
                 ->orderBy('created_at', 'desc')
                 ->paginate()

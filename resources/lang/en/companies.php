@@ -12,8 +12,8 @@ return [
     'delete' => 'Delete',
     'delete_confirm' => 'After deleting, the company will be gone forever.',
     'view' => 'View',
-    'no_select' => '- Select -',
-    
+    'no_select_company_type' => '- Company type -',
+    'no_select_municipality' => '- Municipality -',
     'fields' => [
         'company_code' => 'Company Code',
         'company_name' => 'Company Name',

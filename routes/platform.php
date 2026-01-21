@@ -34,6 +34,8 @@ use App\Orchid\Screens\DocumentScreen;
 use App\Orchid\Screens\CompanyActivityScreen;
 use App\Orchid\Screens\CompanyListScreen;
 use App\Orchid\Screens\CompanyEditScreen;
+use App\Orchid\Screens\MunicipalityListScreen;
+use App\Orchid\Screens\MunicipalityEditScreen;
 
 /*
 |--------------------------------------------------------------------------
@@ -195,6 +197,21 @@ Route::screen('company/{company?}', CompanyEditScreen::class)
     return $trail
         ->parent('platform.hrm.company.list')
     ->push($company ? __('companies.edit') : __('companies.add'), route('platform.hrm.company.edit', $company));
+});
+
+// Municipalities
+Route::screen('municipalities', MunicipalityListScreen::class)
+    ->name('platform.hrm.municipality.list')->breadcrumbs(function (Trail $trail){
+    return $trail
+        ->parent('platform.index')
+    ->push(__('municipalities.title'), route('platform.hrm.municipality.list'));
+});
+
+Route::screen('municipality/{municipality?}', MunicipalityEditScreen::class)
+    ->name('platform.hrm.municipality.edit')->breadcrumbs(function (Trail $trail, $municipality = null){
+    return $trail
+        ->parent('platform.hrm.municipality.list')
+    ->push($municipality ? 'Edit' : 'Create', route('platform.hrm.municipality.edit', $municipality));
 });
 
 // AI Processing Routes

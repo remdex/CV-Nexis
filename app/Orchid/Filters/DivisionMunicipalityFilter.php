@@ -5,7 +5,8 @@ namespace App\Orchid\Filters;
 use Illuminate\Database\Eloquent\Builder;
 use Orchid\Filters\Filter;
 use Orchid\Screen\Field;
-use Orchid\Screen\Fields\Input;
+use Orchid\Screen\Fields\Select;
+use App\Models\Municipality;
 
 class DivisionMunicipalityFilter extends Filter
 {
@@ -48,10 +49,10 @@ class DivisionMunicipalityFilter extends Filter
     public function display(): iterable
     {
         return [
-            Input::make('division_municipality')
-                ->type('text')
+            Select::make('division_municipality')
+                ->options(Municipality::all()->pluck('name', 'code')->toArray())
                 ->value($this->request->get('division_municipality'))
-                ->placeholder(__('companies.filters.search_by_division_municipality'))
+                ->empty(__('companies.no_select_municipality'))
                 ->title('')
         ];
     }

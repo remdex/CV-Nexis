@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Orchid\Screen\AsSource;
 use Orchid\Filters\Filterable;
+use App\Models\Municipality;
 
 class Company extends Model
 {
@@ -67,5 +68,13 @@ class Company extends Model
     public function activityClassificators()
     {
         return $this->belongsToMany(ActivityClassificator::class, 'company_activity');
+    }
+
+    /**
+     * Municipality relation via code stored in `division_municipality`.
+     */
+    public function municipality()
+    {
+        return $this->belongsTo(Municipality::class, 'division_municipality', 'code');
     }
 }
