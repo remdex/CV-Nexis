@@ -189,6 +189,12 @@ Import companies. This file is dedicated to the Lithuanian statistics department
 
 > Source https://get.data.gov.lt/datasets/gov/vmi/mm_registras/MokesciuMoketojas I downloaded as CSV
 
+Import municipalities
+
+> php artisan import:municipalities <path/to/file.json>
+
+> Source https://get.data.gov.lt/datasets/gov/rc/ar/savivaldybe/Savivaldybe I downloaded JSON
+
 Cleanup orphan files via daily cronjob
 
 >  php artisan attachment:clear
