@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Savivaldybės',
+    'title' => 'Municipalities',
     'fields' => [
         'code' => 'Code',
         'name' => 'Name',
