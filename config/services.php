@@ -40,4 +40,6 @@ return [
         'model' => env('GEMINI_MODEL', 'gemini-2.0-flash'),
     ],
 
+    'api_bearer_token' => env('API_BEARER_TOKEN'),
+
 ];
