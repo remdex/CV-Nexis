@@ -111,10 +111,11 @@ php artisan key:generate
 
    **Application Settings:**
    ```bash
-   APP_NAME=CV-Nexis                    # Change from "Laravel" to "CIVIS"
+   APP_NAME=CV-Nexis                 # Change from "Laravel" to "CIVIS"
    APP_ENV=local                     # Keep as "local" for development
    APP_URL=http://localhost:8000     # Update to match your local server URL
    COMPANY_TYPE_OPTIONS='{"242":"UAB/LTD - Uždara Akcinė Bendrovė","111":"Ne pelno įstaigos, organizacijos","103" : "Mažoji bendrija","123":"AB - Akcinė Bendrovė"}' # Based on your company list
+   API_BEARER_TOKEN="<random_string>" # Bearer token which will be used for request
    ```
 
    **Database Configuration:**
@@ -174,6 +175,10 @@ php artisan orchid:admin
 ```bash
 php artisan serve
 ```
+
+10. N8N Integration
+
+* Endpoint E.g - https://civis.kiminas.lt/api/eml-upload
 
 ## Usefull commands
 
