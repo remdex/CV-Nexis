@@ -24,8 +24,15 @@ If you have a commercial request, you can contact me via e-mail remdex@gmail.com
 
 ## Youtube demo
 
-* English language demo - https://youtu.be/uUdog-MFqyM
+### English language
+
+* Demo - https://youtu.be/uUdog-MFqyM
+* About e-mail and automatic CV storing from e-mail https://youtu.be/XRTc9ktRXNw
+
+### Lithuanian language
+
 * Lithuanian language demo - https://youtu.be/NXm7gltWOW0
+* E-mail and automatic CV storing from e-mail - https://youtu.be/1VEud7HRBnc
 
 ### Additional information
 
